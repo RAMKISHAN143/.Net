@@ -1,0 +1,79 @@
+<<<------------------------------------ Polymorphism --------------------------------------------------->>>
+
+## Polymorphism :
+ -- Single thing having multiple forms.   Ex. Ben 10,  All-rounders in Cricket.
+
+ # 2 Types of Polymorphism :
+
+  1. Static Polymorphism / Compile Time Polymorphism :
+	 A. Method overloading   : Same method having Different Forms.
+	 B. Operator overloading : Always Static.
+
+  2. Dynamic Polymorphism / Runtime Polymorphism :
+	 A. Method overriding
+
+<<<---------------------------------------------------------------------------------------------------->>>
+
+## Method overloading :
+ -- Method signature : Return Type, Method Name, Parameters.
+ -- Method overloading means a same method name with different kinds of parameters.
+ -- It happen in 1 class. But It can also happen in Parent and Child Class. No need of Inheritance.
+
+ ==> Return type is not considered in method overloading.
+
+  # When we can overload a method ?
+
+	1. Number of parameters :
+		static void Print(int i) { }
+        static void Print(int i, int j) { }
+
+	2. Types of parameters :
+		static void Print(int i) { }
+        static void Print(float i) { }
+
+	3. Order of parameters :
+		static void Print(int i, float j) { }
+        static void Print(float i, int j) { }
+
+	4. Kinds of parameters :
+		static void Print(int i) {  }
+        static void Print(ref int i) {  }
+
+ # When method overloading is not possible
+
+	1. Just on basis of return type :
+		static int Print() { return 10; }
+        static float Print() { return 10; }
+
+	2. Just of basis of ref & out : Compiler Treat ref and out keyword similarly
+		static void Print(ref int i) { }
+        static void Print(out int i) { i = 10; }
+
+	3. Just on basis of params keyword :
+		static void Print(int[] a) { }
+        static void Print(params int[] a) { }
+
+<<<---------------------------------------------------------------------------------------------------->>>
+
+## Double equal operator (==) :
+ -- This operator checks for reference equality and not value equality for complex type.
+ -- In order to check value equality we need to overload == operator.
+ -- When we overload == operator then we need to overload != operator also.
+
+<<<---------------------------------------------------------------------------------------------------->>>
+
+## Method Overriding :
+ -- Method hiding & Overriding => Same Method signature, Inheritance Needs. Overloading Different Signature.
+ -- Base class reference variable pointing derived class object will call derived class method.
+ -- Always we override a method in derived class.  It needs Inheritance.
+ -- To override a method that method has to be virtual or abstract or override in base class.
+
+   >--------------------------------------------------------------------------------------------<
+
+## Virtual keyword :
+ -- Virtual keyword simply tells that this method can be overridden in derived class.
+ -- Not mandatory that we need to override that method.
+ -- If no overridden Same method present in Derived class then base class method will be called.
+ -- Virtual method body => Virtual method is very similar to your normal method.
+
+<<<---------------------------------------------------------------------------------------------------->>>
